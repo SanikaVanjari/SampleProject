@@ -2,4 +2,9 @@
     <string name="app_name">SampleProject</string>
     <string name="enter_email">Enter Email</string>
     <string name="enter_password">Enter Password</string>
+    <string name="log_in">Log In</string>
+    <string name="test_email">test@android.com</string>
+    <string name="email_error">Invalid Email</string>
+    <string name="test_password">123456</string>
+    <string name="password_error">Invalid Password</string>
 </resources>
