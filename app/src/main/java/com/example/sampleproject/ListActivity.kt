@@ -2,9 +2,12 @@ package com.example.sampleproject
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.ArrayMap
 import android.util.Log
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sampleproject.model.CurrencyRatesResponse
 import com.example.sampleproject.network.ApiCall
+import kotlinx.android.synthetic.main.activity_list.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,8 +49,12 @@ class ListActivity : AppCompatActivity() {
         })
     }
 
-    private fun setData(message: Map<String, Map<String, Double>>?) {
-
+    private fun setData(data: ArrayMap<String, ArrayMap<String, Double>>?) {
+        currencyMainRV.apply {
+            layoutManager= LinearLayoutManager(this@ListActivity,LinearLayoutManager.VERTICAL,false)
+            setHasFixedSize(true)
+            adapter = CurrencyMainAdapter(data)
+        }
 
     }
 }
